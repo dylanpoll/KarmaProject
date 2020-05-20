@@ -33,7 +33,7 @@
 //----------------------
 //Data: objects/static
 //----------------------
-        const espLink = "http://192.168.0.17/";
+        const espLink = process.env.espLINK;
         const link = process.env.url;
 //----------------------
 //bot startup
@@ -152,8 +152,7 @@ bot.on('message', message=>{
 //----------------------
 //bot token
 //----------------------
-    //bot.login('NzEwMjc4NzU5NTA0MTUwNTc4.XryJBg.Jw6SGKHrc3xCWmSx5HgeeF-7ctI');//buildkarma
-bot.login('NjU4MTg0NDM1NDgwNTI2ODg3.Xf8EVQ.GZLuRmT-NcahN9w21u8fGqKkyGk');//karma
+bot.login(process.env.botToken);//karma
     /*           async function getdata(){
                 let args = message.content.substring(7);
                     //let url = 'http://192.168.0.10:5000/posts/'+args;
