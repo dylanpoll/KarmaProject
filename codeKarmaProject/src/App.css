@@ -1,0 +1,63 @@
+.App{
+  text-align: center;
+  background-color: bisque;
+  padding-bottom: 50%;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #414d64;
+  color: white;
+}
+.dylan{
+}
+.nav-link {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.bigHeader{
+  display: flex;
+  justify-content: space-around;
+  font-size: 200%;
+  height: auto;
+  width: auto;
+}
+.botcommands{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 1%;
+  border-radius: 2%;
+}
+.innerWrapper{
+  text-align: left;
+}
+.usersinnerWrapper{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 40%;
+  padding: 1%;
+  border-radius: 2%;
+}
+.userdetailsinnerWrapper{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: auto;
+  padding: 1%;
+  border-radius: 2%;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  padding-bottom: 2%;
+}
+h3{
+  padding-bottom: 1%;
+}
