@@ -152,15 +152,4 @@ bot.on('message', message=>{
 //----------------------
 //bot token
 //----------------------
-bot.login(process.env.botToken);//karma
-    /*           async function getdata(){
-                let args = message.content.substring(7);
-                    //let url = 'http://192.168.0.10:5000/posts/'+args;
-                        let url = link+'posts/'+args;
-                        let response = await fetch(url, { method: 'GET'});
-                        let content = await response.text()
-                        await message.channel.send(content);
-                        return content;
-                // message.channel.send(body);
-            }
-*/
+bot.login(process.env.botToken);
