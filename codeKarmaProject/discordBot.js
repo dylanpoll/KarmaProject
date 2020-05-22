@@ -1,6 +1,6 @@
 /* eslint-disable no-duplicate-case */
 /* eslint-disable default-case */
-//----------------------       ctrl+` to start terminal in vscodenode
+//----------------------       
 //for the discord.js library and creating the bot
 //----------------------
     const Discord = require('discord.js');
@@ -8,44 +8,16 @@
     const fetch = require('node-fetch');
     require('dotenv/config');
 //----------------------
-//prefix for user commands.
-//----------------------
-    const prefix = '!';
-//----------------------
-//embedds
-//----------------------
-    const helpembed = { //the user help menu
-        "title": "Karma Bot User Info :",
-        "color": 9202888,
-        "footer": {
-        "text": "if you need help with using these commands, please ask a team lead!"
-        },
-        "author": {
-        "name": "Made by Dylan Poll"
-        },
-        "fields": [ 
-        {"name": "!led : ","value": " on, off, red, white, blue, green."},
-        {"name": "!delete (number) : ","value": " deletes comments including and above."},
-        {"name": "!profile : ","value": " prints your profile."},
-        {"name": "!viewProfile @mentionedUser : ","value": " shows you the mentioned users profile."},
-        {"name": "!add.karma (number) @mentionedUser : ","value": " adds karma to the user."}
-        ]};
-//----------------------
-//Data: objects/static
-//----------------------
-        const espLink = process.env.espLINK;
-        const link = process.env.url;
-//----------------------
 //bot startup
 //----------------------
-bot.on('ready', () => {console.log('Karma system is armed and dangerous...'+link);});
-bot.on('message', message=>{ 
-//----------------------
-//user command tree   
-//----------------------
-                let command = message.content.substring(prefix.length).split(" "); //tells the bot to search for the prefix, and than a space, and the contents after the sace will be command
-                    if(message.author.bot) return; // tell the bot to ignore comments made by bots.
-        switch(command[0]){ case 'help'         :   message.channel.send({embed: helpembed});  //prints help
+    bot.on('ready', () => {console.log('Karma system is armed and dangerous...');});
+    bot.on('message', message=>{ 
+    //----------------------
+    //user command tree   
+    //----------------------
+        let command = message.content.substring(prefix.length).split(" ");          //tells the bot to search for the prefix, and than a space, and the contents after the sace will be command
+            if(message.author.bot) return; // tell the bot to ignore comments made by bots.
+            switch(command[0]){ case 'help'         :   message.channel.send({embed: helpembed});  //prints help
                                 break;
                             case 'delete'       :   try{if(!command[1]) return message.reply('please put in the amount of messages you want to delete...') //this states if there isn't a number given than ignore the command.
                                                         message.channel.bulkDelete(command[1]).then(console.log("successful delete."));}catch{console.log("error deleting..")}
@@ -121,35 +93,60 @@ bot.on('message', message=>{
                         await patchKarma(code,patchIt).then(console.log("changed karma"));content = (name+" now has : "+patchIt+" karma points!");
                                         return content;}catch{message.channel.send("Failed adding karma...");}}
 //----------------------
-//ASYNC profile
-//----------------------
-            async function theProfile(code){
-                try{let karma;let role;let skills;let name;let content; let streak;let level;
-                    await getname(code).then(content => name = content);name = name.replace(/"/g, "");
-                    await getUserKarma(code).then(content => karma = content);
-                    await getLevel(code).then(content => level = content);level = level.replace(/"/g, "");
-                    await getroles(code).then(content => role = content);role = role.replace(/"/g, "");
-                    await getskills(code).then(content => skills = content);skills = skills.replace(/"/g, "");
-                    await getStreak(code).then(content => streak = content);streak = streak.replace(/"/g, "");
-                    const profileEmbed = {//profile card
-                        "title": name+"s profile :",
-                        "color": 9202888,
-                        "footer":{
-                        "text": " still being built"
-                        },
-                        "fields": [ 
-                        {"name": "Level: ","value": level},
-                        {"name": "Role: ","value": role},
-                        {"name": "Skills: ","value": skills},
-                        {"name": "Karma: ","value": karma},
-                        {"name": "Streak: ","value": streak}
-                                    ]};content = profileEmbed; return content;}catch{console.log("failed in profile");}}
-//----------------------
 //ASYNC DATA VALIDATION
 //----------------------
             async function filterInt(number) {if (/^[-+]?(\d+|Infinity)$/.test(number)) {return Number(number)} else {return "";}}
-})//end of main body
 //----------------------
-//bot token
+//ASYNC profile
 //----------------------
-bot.login(process.env.botToken);
+            async function theProfile(code) {
+                    try {
+                        let karma; let role; let skills; let name; let content; let streak; let level;
+                        await getname(code).then(content => name = content); name = name.replace(/"/g, "");
+                        await getUserKarma(code).then(content => karma = content);
+                        await getLevel(code).then(content => level = content); level = level.replace(/"/g, "");
+                        await getroles(code).then(content => role = content); role = role.replace(/"/g, "");
+                        await getskills(code).then(content => skills = content); skills = skills.replace(/"/g, "");
+                        await getStreak(code).then(content => streak = content); streak = streak.replace(/"/g, "");
+                        const profileEmbed = {//profile card
+                            "title": name + "s profile :",
+                            "color": 9202888,
+                            "footer": {
+                                "text": " still being built"
+                            },
+                            "fields": [
+                                { "name": "Level: ", "value": level },
+                                { "name": "Role: ", "value": role },
+                                { "name": "Skills: ", "value": skills },
+                                { "name": "Karma: ", "value": karma },
+                                { "name": "Streak: ", "value": streak }
+                            ]
+                        };
+                        content = profileEmbed;
+                        return content;
+                    } catch{ console.log("failed in profile"); }
+                }
+})//end of main body!!!!
+
+        //----------------------
+        //embedds (MUST BE PLACED OUTSIDE BOT FUNCTION)
+        //----------------------
+        const helpembed = { //the user help menu
+            "title": "Karma Bot User Info :",
+            "color": 9202888,
+            "footer": {"text": "if you need help with using these commands, please ask a team lead!"},
+            "author": {"name": "Made by Dylan Poll"},
+            "fields": [ {"name": "!delete (number) : ","value": " deletes comments including and above."},
+                        {"name": "!profile : ","value": " prints your profile."},
+                        {"name": "!viewProfile @mentionedUser : ","value": " shows you the mentioned users profile."},
+                        {"name": "!add.karma (number) @mentionedUser : ","value": " adds karma to the user."}
+                        ]};
+        
+        //----------------------
+        //Data: objects/static
+        //----------------------
+        const prefix = '!';//----------------------//prefix for user commands.
+        const espLink = process.env.espLINK;
+        const link = process.env.url;
+        bot.login(process.env.botToken);//----------------------//bot token
+        

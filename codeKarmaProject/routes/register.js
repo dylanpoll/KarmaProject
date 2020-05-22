@@ -34,7 +34,7 @@ const router = express.Router();
                             questHistory : "none",
                             projectHistory :  "none",
                             skills : "none",
-                            discordID : 000,
+                            discordID : 0,
                             level : "F",
                             streak : 0,
                             password :  req.body.password,
