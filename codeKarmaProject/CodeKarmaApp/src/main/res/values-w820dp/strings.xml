@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Code Karma</string>
     <string name="code_karma">Code Karma</string>
     <string name="meeting_sign_in">Meeting Sign In</string>
     <string name="sign_in_portal">Sign in portal</string>
