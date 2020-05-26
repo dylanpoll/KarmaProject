@@ -18,6 +18,7 @@ const router = express.Router();
                     level : req.body.level,
                     streak : req.body.streak,
                     password :  req.body.password,
+                    admin :  req.body.admin,
                 });
             try {   const savedUser = await user.save()
                     res.json(savedUser);
@@ -38,6 +39,7 @@ const router = express.Router();
                             level : "F",
                             streak : 0,
                             password :  req.body.password,
+                            admin :  false,
                         });
                         console.log(user);
                     try {   const savedUser = await user.save()

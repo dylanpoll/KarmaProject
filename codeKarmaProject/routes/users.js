@@ -182,12 +182,43 @@ const router = express.Router();
                                         console.log("added to streak counter");
                                         await User.updateOne({_id: user._id},{$set:{ karma : karmaChange}} ); //updates karma
                                         console.log("added Karma");
-                                        let response = {valid : true};
-                                        res.json(response);
+                                        let response = (user.name)+" Has been successfully scanned in! \n Karma points are now : "+(karmaChange)+". \n Streak is now :" +(change)+".";
+                                        res.text(response);
                                         }catch(err){
                                             res.json({valid : false});
                                             console.log({message: err});
                                             }
                             });
+            //---------------------------------------
+            //USER LOG IN
+            //---------------------------------------
+            router.post('/logIn',async (req,res) =>{
+                try {            
+                        let user = await User.findOne({'email':(req.body.email)});            //returns the object that meets this search
+                        let passwordOnFile = user.password;                                         //increasing values
+                        let submittedPassword = req.body.password;
+                        let response;let adminoruser;
+                                if(passwordOnFile === submittedPassword){
+                                    if(user.admin === true){
+                                    response = user;
+                                    adminoruser="admin";
+                                    }
+                                    if(user.admin === false){
+                                        response = user;
+                                    adminoruser="user";
+                                    }
+                                    console.log("logging in "+user.name+" as a "+adminoruser);
+                                }
+                                if(passwordOnFile !== submittedPassword){
+                                    response =    { valid : false,admin : false};
+                                        }
+                                res.json(response);
+                                }catch(err){
+                                        res.json({valid : false,admin : false});
+                                        console.log("failed in login");
+                                        }
+                });
+
+
 //routesEND-------------
 module.exports = router;
