@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,63 +17,172 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="2.5dp"
         android:background="@android:color/black" />
+
+    <TextView
+        android:layout_width="360dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:text="Code Karma"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
     <View
         android:layout_width="310dp"
         android:layout_height="510dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
         android:background="@android:color/black" />
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="500dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:background="@android:color/white" />
     <View
-        android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="140.5dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
-        android:background="@android:color/white" />
+        android:background="@android:color/black" />
 
     <TextView
-        android:layout_width="360dp"
-        android:layout_height="95dp"
-        android:gravity="center"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="140.5dp"
         android:background="#A11414"
-        android:text="@string/code_karma"
-        android:textColor="#F1EFEF"
-        app:autoSizeTextType="uniform"
-        app:autoSizeMinTextSize="12sp"
+        android:gravity="center"
+        android:text="User Sign In Page"
+        android:textColor="#FAAC6D"
         app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:text="Service URL"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
+
+    <EditText
+        android:id="@+id/mainurl"
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp"
+        android:background="#8C8181"
+        android:ems="10"
+        android:hint="Service Host Address"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="E-mail Address"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:background="#8C8181"
+        android:ems="10"
+        android:hint="E-mail Address"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp"
+        android:text="Password"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="260dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="390dp"
+        android:background="#8C8181"
+        android:ems="10"
+        android:hint="Password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/saveAccountInfo"
+        android:layout_width="260dp"
+        android:layout_height="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:text="Remember These Settings?"
+        android:textColor="#8C8181"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
     <View
         android:layout_width="264dp"
         android:layout_height="53dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="470dp"
         android:background="@android:color/black" />
+
     <Button
-        android:id="@+id/scan"
+        android:id="@+id/userlogin"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="472.5dp"
         android:background="#A11414"
-        android:text="@string/event_sign_in"
+        android:text="Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF" />
     <View
         android:layout_width="264dp"
         android:layout_height="53dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="540dp"
         android:background="@android:color/black" />
+
     <Button
-        android:id="@+id/gen"
+        android:id="@+id/register"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="202dp"
+        android:layout_marginTop="542.5dp"
         android:background="#A11414"
-        android:text="@string/generate_qr_code"
+        android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF" />
 </RelativeLayout>

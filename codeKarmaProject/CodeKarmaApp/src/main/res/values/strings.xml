@@ -1,12 +1,18 @@
 <resources>
-    <string name="app_name">Code Karma</string>
-    <string name="code_karma">Code Karma</string>
-    <string name="meeting_sign_in">Meeting Sign In</string>
-    <string name="sign_in_portal">Sign in portal</string>
-    <string name="url_for_signin_use">URL for signin use</string>
-    <string name="event_sign_in">Event Sign In</string>
-    <string name="generate_qr_code">Generate QR Code</string>
-    <string name="scan_in_members">Scan In Members</string>
-    <string name="event_sign_in">Event Sign In</string>
-    <string name="generate_qr_code">Generate QR Code</string>
+    <string name="app_name">CodeKarma</string>
+    <string name="userEmail">com.dylanpoll.CodeKarma.userEmail</string>
+    <string name="userPassword">com.dylanpoll.CodeKarma.userPassword</string>
+    <string name="saveAccountInfo">com.dylanpoll.CodeKarma.saveAccountInfo</string>
+    <string name="saveServiceURL">com.dylanpoll.CodeKarma.saveServiceURL</string>
+    <string name="serverMainurl">com.dylanpoll.CodeKarma.serverMainURL</string>
+    <string name="discordid">com.dylanpoll.CodeKarma.discordid</string>
+    <string name="karma">com.dylanpoll.CodeKarma.karma</string>
+    <string name="admin">com.dylanpoll.CodeKarma.admin</string>
+    <string name="name">com.dylanpoll.CodeKarma.name</string>
+    <string name="roles">com.dylanpoll.CodeKarma.roles</string>
+    <string name="questHistory">com.dylanpoll.CodeKarma.questHistory</string>
+    <string name="projectHistory">com.dylanpoll.CodeKarma.projectHistory</string>
+    <string name="skills">com.dylanpoll.CodeKarma.skills</string>
+    <string name="streak">com.dylanpoll.CodeKarma.streak</string>
+    <string name="level">com.dylanpoll.CodeKarma.level</string>
 </resources>

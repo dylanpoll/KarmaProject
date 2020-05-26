@@ -1,19 +1,15 @@
 package com.dylanpoll.CodeKarma;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -28,13 +24,11 @@ import org.json.JSONObject;
 public class ReaderActivity extends AppCompatActivity {
 
     private Button scan_btn;
-    EditText text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reader);
-        text = (EditText) findViewById(R.id.port);
-        scan_btn = (Button) findViewById(R.id.scan_btn);
+        scan_btn = findViewById(R.id.scan_btn);
         final Activity activity = this;
         scan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,14 +51,14 @@ public class ReaderActivity extends AppCompatActivity {
                 }
                 else {
                 String karmaID = result.getContents();
-                String url = text.getText().toString().trim();
-                postSignIn(karmaID,url);
+                postSignIn(karmaID);
                 }
             }else{
             super.onActivityResult(requestCode, resultCode, data);}//failed to read so continue to read
     }
-    protected void postSignIn(String karmaID,String url)  {
+    protected void postSignIn(String karmaID)  {
         JSONObject body = new JSONObject();
+        String url = (getString(R.string.serverMainurl))+"users/signIn";
             try {body.put("idtoken", karmaID);} catch (JSONException e) {e.printStackTrace();}//takes the QR code and packs it into the patch body.
         JsonObjectRequest request = new JsonObjectRequest
                 (Request.Method.PATCH, url, body, new Response.Listener<JSONObject>() {
