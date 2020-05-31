@@ -175,7 +175,7 @@ const router = express.Router();
                             });
                         router.patch('/signIn',async (req,res) =>{
                             try {            
-                                    let user = await User.findOne({'_id':(req.body.idtoken)});            //returns the object that meets this search
+                                    let user = await User.findOne({'_id':(req.body._ID)});            //returns the object that meets this search
                                     let change = ((user.streak) + 1);                                         //increasing values
                                     let karmaChange = ((user.karma) + 5);
                                         await User.updateOne({_id: user._id},{$set:{ streak : change}} );     //updates streak
