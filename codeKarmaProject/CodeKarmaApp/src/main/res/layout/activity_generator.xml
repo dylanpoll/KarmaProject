@@ -47,13 +47,13 @@
         app:fontFamily="@font/adamina" />
 
     <TextView
+        android:id="@+id/nameField"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="130dp"
         android:background="#A11414"
         android:gravity="center"
-        android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#F1EFEF"
         app:autoSizeMaxTextSize="100sp"
@@ -68,6 +68,7 @@
         android:layout_marginTop="182.5dp"
         android:background="#A11414"
         android:gravity="center"
+        android:text="Level :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#F1EFEF"
         app:autoSizeMaxTextSize="100sp"
@@ -75,21 +76,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="180dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/level"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/levelField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="180dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -106,21 +108,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="230dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/karma"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/karmaField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="230dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -137,21 +140,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="280dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/roles"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/rolesField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="280dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -168,21 +172,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="330dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/skills"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/skillField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="330dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -199,21 +204,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="380dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/projectHistory"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/projhistField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="380dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -230,21 +236,22 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="430dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/questHistory"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
+
+    <TextView
+        android:id="@+id/questhistField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="430dp"
+        android:background="#A11414"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F1EFEF"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:layout_width="80dp"
@@ -253,7 +260,7 @@
         android:layout_marginTop="482.5dp"
         android:background="#A11414"
         android:gravity="center"
-        android:text="Discord ID :"
+        android:text="Streak :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#F1EFEF"
         app:autoSizeMaxTextSize="100sp"
@@ -261,30 +268,15 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="480dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/streak"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
 
     <TextView
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="182dp"
+        android:id="@+id/streakField"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="480dp"
         android:background="#A11414"
         android:gravity="center"
-        android:text="Level :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#F1EFEF"
         app:autoSizeMaxTextSize="100sp"
@@ -292,20 +284,5 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/adamina" />
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="480dp"
-                    android:background="#A11414"
-                    android:gravity="center"
-                    android:text="@string/discordid"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#F1EFEF"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeMinTextSize="12sp"
-                    app:autoSizeStepGranularity="2sp"
-                    app:autoSizeTextType="uniform"
-                    app:fontFamily="@font/adamina" />
 
 </RelativeLayout>

@@ -50,16 +50,16 @@ public class ReaderActivity extends AppCompatActivity {
             if(result.getContents()==null){Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();//failed to read
                 }
                 else {
-                String karmaID = result.getContents();
-                postSignIn(karmaID);
+                String _ID = result.getContents();
+                postSignIn(_ID);
                 }
             }else{
             super.onActivityResult(requestCode, resultCode, data);}//failed to read so continue to read
     }
-    protected void postSignIn(String karmaID)  {
+    protected void postSignIn(String _ID)  {
         JSONObject body = new JSONObject();
-        String url = (getString(R.string.serverMainurl))+"users/signIn";
-            try {body.put("idtoken", karmaID);} catch (JSONException e) {e.printStackTrace();}//takes the QR code and packs it into the patch body.
+        String url = (getString(R.string.serverMainurl))+"/users/signIn";
+            try {body.put("ID", _ID);} catch (JSONException e) {e.printStackTrace();}//takes the QR code and packs it into the patch body.
         JsonObjectRequest request = new JsonObjectRequest
                 (Request.Method.PATCH, url, body, new Response.Listener<JSONObject>() {
                     @Override
