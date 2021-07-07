@@ -1,3 +1,5 @@
+This project is being re worked into a react.js website instead in order to allow for cross platform interaction in a easier to maintain manner. This project will be picked back up and a large update will overwrite it when there is a initial stable release that covers the entire spectum of features that this version was working to cover. including a re vamp on the mobile app, website, discord bot, and database deployed and its routing mechanics.
+
 # KarmaProject
 This is my project to create incentive for student activity in my club.<br>
 still under development this project uses a MERN stack and a discord bot. It also has a email bot in development.
